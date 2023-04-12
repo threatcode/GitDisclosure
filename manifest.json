@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "GitDisclosure",
+  "version": "4.6.8",
+  "description": "An extension for checking if .git is exposed in visited websites",
+  "icons": {
+    "16": "icons/GitDisclosure-16.png",
+    "32": "icons/GitDisclosure-32.png",
+    "48": "icons/GitDisclosure-48.png",
+    "96": "icons/GitDisclosure-96.png",
+    "128": "icons/GitDisclosure-128.png"
+  },
+  "permissions": [
+    "*://*/*",
+    "webRequest",
+    "storage",
+    "notifications",
+    "downloads"
+  ],
+  "background": {
+    "scripts": [
+      "GitDisclosure.js",
+      "lib/pako_inflate.min.js",
+      "lib/jszip.min.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "GitDisclosure",
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html"
+  }
+}
